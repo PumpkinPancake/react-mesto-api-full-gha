@@ -12,7 +12,7 @@ const { errors } = require("celebrate");
 
 const router = require("./routes/router");
 
-const { requestLogger, errorLogger } = require('./middlewares/logger');
+const { requestLogger, errorLogger } = require('./middleweares/logger');
 
 const { MONGO_URL = "mongodb://127.0.0.1/mestodb", PORT = 3000 } = process.env;
 
