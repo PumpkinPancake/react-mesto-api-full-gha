@@ -1,16 +1,5 @@
 /* eslint-env es6 */
 
-// перенести подключение к серверу в файл сервер.джс и в паскейдже в скриптах поменять старт с app на server
-
-// Создаём файл endpoint.test.js для тестов. К нему нужно подключить библиотеку:
-// // endpoint.test.js
-// const supertest = require('supertest');
-// const app = require('./app.js');
-// В переменную supertest записана функция, которой нужно передать на вход наше приложение:
-// const request = supertest(app);
-// Готово! Теперь мы можем обращаться к методам библиотеки через объект request.
-//  Все методы этого объекта возвращают промисы, которые нужно обработать асинхронно.
-
 const mongoose = require("mongoose");
 
 const express = require("express");
@@ -22,6 +11,8 @@ const rateLimit = require("express-rate-limit");
 const { errors } = require("celebrate");
 
 const router = require("./routes/router");
+
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const { MONGO_URL = "mongodb://127.0.0.1/mestodb", PORT = 3000 } = process.env;
 
@@ -40,7 +31,11 @@ app.use(helmet());
 
 app.use(limiter);
 
+app.use(requestLogger);
+
 app.use(router);
+
+app.use(errorLogger);
 
 app.use(errors());
 
