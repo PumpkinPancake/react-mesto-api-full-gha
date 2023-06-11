@@ -15,4 +15,3 @@ export const validationConfig = {
     errorClass: "popup__input-error_visible",
     typeError: ".popup__input_type_error",
   };
-
