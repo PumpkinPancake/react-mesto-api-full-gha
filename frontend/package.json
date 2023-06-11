@@ -1,0 +1,59 @@
+{
+  "name": "mesto",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "express": "^4.18.2",
+    "gh-pages": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://pumpkinpancake.github.io/mesto-react/",
+  "description": "Адаптивный лендинг\r ------\r ## Что сделано\r * Структура стилей и файлов по методологии БЭМ\r * Верстка Flexbox\r * Верстка Grid\r * Медиазапросы\r * Прописана логика для добавления/удаления картинок\r * Прописана валидация форм на Js\r * Прописана логика для постановки лайков\r * Плавное открытие/закрытие модальных окон\r * Использованы функциональные компоненты\r * Использованы классы и методы\r * Сборка с помощью Webpack\r * Реализована отправка запросов на сервер через Api\r * Использованы основные принципы ООП\r * Реализована регистрация и аутентификация пользователя\r * Настроена навигация по страницам\r ------\r ## В проекте использованы\r * HTML\r * CSS\r * Модификаторы\r * CSS import\r * Media\r * Java script\r * Webpack\r * React\r * JSX\r * Route",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PumpkinPancake/react-mesto-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PumpkinPancake/react-mesto-auth/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
