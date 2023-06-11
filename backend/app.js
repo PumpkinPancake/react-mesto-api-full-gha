@@ -23,6 +23,8 @@ const { errors } = require("celebrate");
 
 const router = require("./routes/router");
 
+const { requestLogger, errorLogger } = require("./middlewares/logger");
+
 const { MONGO_URL = "mongodb://127.0.0.1/mestodb", PORT = 3000 } = process.env;
 
 const limiter = rateLimit({
@@ -40,7 +42,11 @@ app.use(helmet());
 
 app.use(limiter);
 
+app.use(requestLogger);
+
 app.use(router);
+
+app.use(errorLogger);
 
 app.use(errors());
 
