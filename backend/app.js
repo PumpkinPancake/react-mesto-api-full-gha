@@ -1,5 +1,7 @@
 /* eslint-env es6 */
 
+require('dotenv').config();
+
 const mongoose = require("mongoose");
 
 const express = require("express");
