@@ -1,5 +1,4 @@
 /* eslint-env es6 */
-
 require('dotenv').config();
 
 const mongoose = require("mongoose");
@@ -14,7 +13,7 @@ const { errors } = require("celebrate");
 
 const router = require("./routes/router");
 
-const { requestLogger, errorLogger } = require('./middleweares/logger');
+const {requestLogger, errorLogger } = require('./middleweares/logger');
 
 const { MONGO_URL = "mongodb://127.0.0.1/mestodb", PORT = 3000 } = process.env;
 
