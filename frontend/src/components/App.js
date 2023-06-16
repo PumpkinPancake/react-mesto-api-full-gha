@@ -10,7 +10,6 @@ import ImagePopup from "./ImagePopup";
 import { CurrentUserContext } from "../context/CurrentUserContext";
 import EditProfilePopup from "./EditProfilePopup";
 import api from "../utils/Api";
-import Card from "./Card";
 
 import "../index.css";
 import EditAvatarPopup from "./EditAvatarPopup";
@@ -18,7 +17,6 @@ import AddPlacePopup from "./AddPlacePopup";
 import { Register } from "./Register";
 import { Login } from "./Login";
 import { InfoToolTip } from "./InfoToolTip";
-import { PopupWithWarning } from "./PopupWithWarning";
 import { ProtectedRoute } from "./ProtectedRoute";
 import * as auth from "../utils/auth";
 
