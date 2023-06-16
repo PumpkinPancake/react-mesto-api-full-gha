@@ -273,9 +273,9 @@ function App() {
                 element={Main}
                 loggedIn={loggedIn}
                 cards={cards}
-                onEditAvatarClick={handleEditAvatarClick}
-                onEditProfileClick={handleEditProfileClick}
-                onAddPlaceClick={handleAddPlaceClick}
+                onEditAvatar={handleEditAvatarClick}
+                onEditProfile={handleEditProfileClick}
+                onAddPlace={handleAddPlaceClick}
                 onCardClick={handleCardClick}
                 onCardLike={handleCardLike}
                 onCardDelete={handleCardDelete}
