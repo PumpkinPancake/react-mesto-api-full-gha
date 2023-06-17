@@ -1,5 +1,3 @@
-/* eslint-env es6 */
-
 const { Joi, celebrate } = require("celebrate");
 const isUrl = require("validator/lib/isURL");
 

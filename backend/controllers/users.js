@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const userSchema = require("../models/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -28,9 +27,6 @@ const getUser = (req, res, next) => {
       res.status(200).send(user);
     })
     .catch((err) => {
-      if (err.name === "CastError") {
-        return next(new BAD_REQUEST_ERROR("Incorrect data sent"));
-      }
       next(err);
     });
 };
@@ -45,9 +41,6 @@ const getUserById = (req, res, next) => {
       res.status(200).send({ data: user });
     })
     .catch((err) => {
-      if (err.name === "CastError") {
-        return next(new BAD_REQUEST_ERROR("Incorrect data sent"));
-      }
       return next(err);
     });
 };
@@ -97,7 +90,7 @@ const updateUser = (req, res, next) => {
       res.send(user);
     })
     .catch((err) => {
-      if (err.name === "ValidationError" || err.name === "CastError") {
+      if (err.name === "ValidationError") {
         return next(new BAD_REQUEST_ERROR("Incorrect data sent"));
       }
       return next(err);
@@ -118,7 +111,7 @@ const updateAvatar = (req, res, next) => {
       res.send({ data: user });
     })
     .catch((err) => {
-      if (err.name === "ValidationError" || err.name === "CastError") {
+      if (err.name === "ValidationError") {
         return next(new BAD_REQUEST_ERROR("Incorrect data sent"));
       }
       return next(err);

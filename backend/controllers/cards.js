@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const cardSchema = require("../models/card");
 
 require("mongoose-lean-id");

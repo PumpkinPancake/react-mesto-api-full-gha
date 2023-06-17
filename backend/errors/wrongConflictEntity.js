@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 class WrongConflictEntity extends Error {
   constructor(message) {
     super(message);

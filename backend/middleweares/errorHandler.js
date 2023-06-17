@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const errorHandler = (error, req, res, next) => {
   const { status = 500, message } = error;
 
