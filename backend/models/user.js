@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const validator = require("validator");
 const bcryptjs = require("bcryptjs");
 const mongoose = require("mongoose");

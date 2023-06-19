@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const router = require("express").Router();
 
 const auth = require("../middleweares/auth");

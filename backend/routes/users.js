@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const usersRouter = require("express").Router();
 
 const {

@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const cardsRouter = require("express").Router();
 
 const {

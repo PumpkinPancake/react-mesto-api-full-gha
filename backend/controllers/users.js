@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const userSchema = require("../models/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
