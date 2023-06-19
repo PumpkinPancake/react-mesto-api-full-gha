@@ -11,6 +11,6 @@
 
 IP-адрес 158.160.45.6
 
-Frontend https://Pumpkin.Pancake.students.nomoredomains.rocks
+Frontend Pumpkin.Pancake.students.nomoredomains.rocks
 
-Backend https://api.pumpkin.students.nomoredomains.rocks
+Backend api.pumpkin.students.nomoredomains.rocks

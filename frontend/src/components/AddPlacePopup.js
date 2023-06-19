@@ -1,6 +1,6 @@
 import React from "react";
 import PopupWithForm from "./PopupWithForm";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 export default function AddPlacePopup({
   isOpen,

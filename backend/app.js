@@ -17,6 +17,8 @@ const {requestLogger, errorLogger } = require('./middleweares/logger');
 
 const { MONGO_URL = "mongodb://127.0.0.1/mestodb", PORT = 3000 } = process.env;
 
+const { errorHandler } = require('./middleweares/errorHandler');
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
@@ -40,14 +42,7 @@ app.use(errorLogger);
 
 app.use(errors());
 
-app.use((error, req, res, next) => {
-  const { status = 500, message } = error;
-
-  res.status(status).send({
-    message: status === 500 ? "Error on the server" : message,
-  });
-  next();
-});
+app.use(errorHandler);
 
 mongoose
   .connect(MONGO_URL)

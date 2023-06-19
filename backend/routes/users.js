@@ -19,7 +19,7 @@ const {
 usersRouter.get("/", getUsers);
 usersRouter.get('/me', getUser);
 usersRouter.get("/:userId", userIDValidator, getUserById);
-// usersRouter.post("/", createUser);
+usersRouter.post("/", createUser);
 usersRouter.patch("/me", updateUserValidator, updateUser);
 usersRouter.patch("/me/avatar", updateAvatarValidator, updateAvatar);
 

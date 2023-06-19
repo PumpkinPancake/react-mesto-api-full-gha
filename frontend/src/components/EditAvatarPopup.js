@@ -1,8 +1,8 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import PopupWithForm from "./PopupWithForm";
 
-export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
+export default function EditAvatarPopup({ isOpen, onClose, handleClick, onUpdateAvatar }) {
   const updateAvatar = useRef(null);
 
   function handleSubmit(e) {
@@ -22,6 +22,7 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
       name="avatar"
       isOpen={isOpen}
       onClose={onClose}
+      handleClick={handleClick}
       onSubmit={handleSubmit}
     >
       <label className="popup__label">
