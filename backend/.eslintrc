@@ -5,10 +5,9 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "parser": "babel-eslint",
-  "plugins": [
-    "babel"
-  ],
+
+  "extends": "airbnb-base",
+
   "rules": {
     "no-underscore-dangle": ["error", { "allow": ["_id"] }]
   }
